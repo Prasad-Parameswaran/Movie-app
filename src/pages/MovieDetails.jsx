@@ -60,7 +60,7 @@ export default function MovieDetails() {
 
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 z-10 container mx-auto">
 
-                    <div className="flex flex-col md:flex-row items-end gap-8">
+                    <div className="flex flex-col md:flex-row sm:items-end gap-8">
                         <div className="w-40 md:w-56 flex-shrink-0 rounded-xl overflow-hidden shadow-2xl border-4 border-white/10 hidden md:block transform translate-y-8">
                             <img
                                 src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x450'}
