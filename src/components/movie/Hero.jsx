@@ -26,7 +26,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#4a0404] via-transparent to-transparent"></div>
             </div>
 
-            <div className="absolute inset-0 container mx-auto px-6 flex flex-col justify-center pb-24">
+            <div className="absolute inset-0 container mx-auto px-6 lg:px-[40px] flex flex-col justify-center pb-24">
                 <div className="max-w-2xl pt-20">
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 leading-tight">
                         Spider man<br />

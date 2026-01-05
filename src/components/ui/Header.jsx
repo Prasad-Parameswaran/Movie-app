@@ -34,16 +34,9 @@ export default function Header() {
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 py-4 md:py-6 transition-all duration-300 bg-gradient-to-b from-dark-bg/90 to-transparent">
-            <div className="container mx-auto px-6 flex items-center justify-between">
-                <div className="flex items-center gap-4 md:gap-8">
-                    <button
-                        className="md:hidden text-white"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    >
-                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
-
+        <header className="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300 bg-gradient-to-b from-black/80 to-transparent">
+            <div className="container mx-auto px-6 lg:px-[40px] flex items-center justify-between">
+                <div className="flex items-center gap-8">
                     <Link to="/" className="flex items-center gap-2">
                         <span className="bg-primary text-white text-[10px] md:text-xs font-bold px-2 py-1 rounded-sm">NEW</span>
                         <span className="text-white font-bold tracking-wider text-sm md:text-base">MOVIE</span>
@@ -58,8 +51,8 @@ export default function Header() {
                     </div>
                 </div>
 
-                <nav className="hidden md:flex items-center gap-8 text-sm text-gray-300 font-medium">
-                    <Link to="/" className="text-white hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-primary after:shadow-[0_0_10px_rgba(229,9,20,0.8)]">New Movie</Link>
+                <nav className="hidden lg:flex items-center gap-8 text-sm text-gray-300 font-medium">
+                    <Link to="/" className="text-white hover:text-primary transition-colors border-b-2 border-primary pb-1">New Movie</Link>
                     <Link to="#" className="hover:text-white transition-colors">Genre</Link>
                     <Link to="#" className="hover:text-white transition-colors">Country</Link>
                     <Link to="#" className="hover:text-white transition-colors">Movie</Link>
@@ -67,13 +60,11 @@ export default function Header() {
                 </nav>
 
                 <div className="flex items-center gap-4 text-gray-300">
-                    <div className="h-4 w-px bg-gray-600 hidden md:block"></div>
-
                     <form onSubmit={handleSearch} className="relative hidden md:block">
                         <input
                             type="text"
                             placeholder="Search..."
-                            className="bg-transparent border border-white/20 rounded-full px-4 py-1.5 pl-10 text-xs text-white focus:outline-none focus:border-primary w-[160px] transition-all placeholder:text-gray-500"
+                            className="bg-black/20 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 pl-10 text-xs text-white focus:outline-none focus:border-primary w-[200px] transition-all placeholder:text-gray-400"
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
                         />
@@ -82,21 +73,12 @@ export default function Header() {
                         </button>
                     </form>
 
-
-                    <form onSubmit={handleSearch} className="relative md:hidden">
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                            className="bg-transparent border border-white/20 rounded-full px-3 py-1.5 pl-8 text-xs text-white focus:outline-none focus:border-primary w-[120px] transition-all placeholder:text-gray-500"
-                            value={query}
-                            onChange={(e) => setQuery(e.target.value)}
-                        />
-                        <button type="submit" className="absolute left-2.5 top-1/2 -translate-y-1/2 hover:text-white text-gray-400">
-                            <Search size={14} />
-                        </button>
-                    </form>
-
-
+                    <button
+                        className="md:hidden text-white"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    >
+                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
                 </div>
             </div>
 

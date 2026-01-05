@@ -63,7 +63,7 @@ export default function Home() {
 
                     <MovieRow title="Upcoming" movies={upcomingMovies} variant="upcoming" />
 
-                    <div className="container mx-auto px-6 mt-12 pb-12 border-t border-white/5 pt-8">
+                    <div className="container mx-auto px-6 lg:px-[40px] mt-12 pb-12 border-t border-white/5 pt-8">
                         <Pagination
                             currentPage={page}
                             onPageChange={setPage}

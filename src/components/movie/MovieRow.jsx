@@ -5,12 +5,12 @@ export default function MovieRow({ title, movies, variant = 'portrait' }) {
 
     return (
         <section className="mb-12">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-6 lg:px-[40px]">
                 <h2 className="text-2xl font-bold text-white mb-6">{title}</h2>
             </div>
 
             <div className="overflow-x-auto pb-8 no-scrollbar scroll-pl-6 pt-10">
-                <div className="flex gap-6 w-max px-6 md:px-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))] items-end">
+                <div className="flex gap-6 w-max px-6 md:px-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))] lg:px-[max(40px,calc((100vw-1280px)/2+40px))] 2xl:px-[max(40px,calc((100vw-1536px)/2+40px))] items-end">
                     {movies.map((movie) => (
                         <div key={movie.imdbID} className={`${variant === 'landscape' ? 'w-[280px]' : variant === 'hero-card' ? 'w-[140px]' : 'w-[200px]'} flex-shrink-0`}>
                             <MovieCard movie={movie} variant={variant} />
